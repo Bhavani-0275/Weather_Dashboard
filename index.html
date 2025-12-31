@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+        <h1>⛅Weather Dashboard</h1>
+        <p>Your real-time weather companion</p>
+    </div>
+
+    <div class="search-box">
+        <input id="cityInput" value="London" placeholder="Enter city name">
+        <button onclick="searchWeather()">Search</button>
+    </div>
+
+    <div id="errorMsg" class="error" style="display:none"></div>
+    <div id="loading" class="loading" style="display:none">Loading weather data.....</div>
+     
+    <div id="weatherContent" >
+        <div class="current-weather">
+            <div class="current-weather-header">
+                <div>
+                    <div class="location" id="locationName">-</div>
+                    <div class="date" id="date">-</div>
+                </div>
+            </div>
+            <div class="current-main">
+                <div class="weather-icon" id="currentIcon">☀️</div>
+                <div>
+                    <div class="temperature" id="temperature">-</div>
+                    <div class="description" id="description">-</div>
+                </div>
+            </div>
+            <div class="weather-details">
+                <div class="detail-item">
+                    <div>Feels Like</div>
+                    <div class="value" id="feelsLike">-</div>
+                </div>
+                <div class="detail-item">
+                    <div>Humidity</div>
+                    <div class="value" id="humidity">-</div>
+                </div>
+                <div class="detail-item">
+                    <div>Wind</div>
+                    <div class="value" id="windSpeed">-</div>
+                </div>
+                <div class="detail-item">
+                    <div>Pressure</div>
+                    <div class="value" id="pressure">-</div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="forecast-section">
+                <h2>Hourly Forecast</h2>
+                <div class="hourly-forecast" id="hourlyForecast"></div>
+        </div>
+        <div class="forecast-section">
+                <h2>7-Day Forecast</h2>
+                <div class="daily-forecast" id="daily-forecast"></div>
+        </div>
+
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
